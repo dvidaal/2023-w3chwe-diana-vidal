@@ -3,7 +3,7 @@ import HeaderComponent from "./components/HeaderComponent/HeaderComponent.js";
 import CardComponent from "./components/MainComponent/CardComponent.js";
 import getPokemons from "./dataPokemon/GetPokemon/GetPokemons.js";
 
-const allPokeballs = await getPokemons(10);
+const allPokeballs = await getPokemons(150);
 
 const { body } = document;
 
@@ -14,7 +14,7 @@ const pokemonList = new Component(body, "pokemonList", "article");
 pokemonList.render();
 
 (async () => {
-  const allPokeballs = await getPokemons(10);
+  const allPokeballs = await getPokemons(150);
   const selectedPokemons = allPokeballs.map((selectedPokemon) => {
     const card = new CardComponent(pokemonList.element, selectedPokemon);
     card.render();

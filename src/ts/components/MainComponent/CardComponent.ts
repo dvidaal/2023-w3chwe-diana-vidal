@@ -15,7 +15,7 @@ class CardComponent extends Component {
 
   render() {
     super.render();
-    this.element.innerHTML = `<ul><li class="pokemonCard">${this.pokemon.name}<img src="${this.pokemon.sprites.other.dream_world.front_default}">Height:${this.pokemon.height} Weight:${this.pokemon.weight}</li></ul>`;
+    this.element.innerHTML = `<ul><li class="pokemonCard">${this.pokemon.name}<img class="pokemonCard__imagePokemon" src="${this.pokemon.sprites.other.dream_world.front_default}">Height:${this.pokemon.height} Weight:${this.pokemon.weight}</li></ul>`;
   }
 }
 

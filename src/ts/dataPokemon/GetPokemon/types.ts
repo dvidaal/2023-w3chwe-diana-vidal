@@ -3,6 +3,7 @@ export interface PokemonStructure {
   url: string;
   height: string;
   weight: string;
+  id: number;
   sprites: {
     other: {
       dream_world: {
