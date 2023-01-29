@@ -2,7 +2,6 @@ import Component from "./components/Component/Component.js";
 import HeaderComponent from "./components/HeaderComponent/HeaderComponent.js";
 import CardComponent from "./components/MainComponent/CardComponent.js";
 import getPokemons from "./dataPokemon/GetPokemon/GetPokemons.js";
-import type { PokemonStructure } from "./dataPokemon/GetPokemon/types.js";
 
 const allPokeballs = await getPokemons(10);
 
@@ -11,7 +10,7 @@ const { body } = document;
 const header = new HeaderComponent(body, "main-title", "header");
 header.render();
 
-const pokemonList = new Component(body, "pokemonList", "ul");
+const pokemonList = new Component(body, "pokemonList", "article");
 pokemonList.render();
 
 (async () => {
