@@ -1,9 +1,20 @@
 import type { PokemonStructure } from "./types.js";
 
-const getPokemons = async (url: string) => {
-  const response = await fetch(url);
+const getPokemons = async (id: number): Promise<PokemonStructure[]> => {
+  const catchPokemons = [];
 
-  const pokemonInfo = (await response.json()) as PokemonStructure;
+  for (let i = 1; i <= id; i++) {
+    const response = fetch(`https://pokeapi.co/api/v2/pokemon/${i}/`);
+    catchPokemons.push(response);
+  }
+
+  const catchAllPokemons = await Promise.all(catchPokemons);
+  const releasePokemons = catchAllPokemons.map(async (releasePokemon) =>
+    releasePokemon.json()
+  );
+  const pokemonInfo = (await Promise.all(
+    releasePokemons
+  )) as PokemonStructure[];
 
   return pokemonInfo;
 };
