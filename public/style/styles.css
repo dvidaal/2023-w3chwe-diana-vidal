@@ -18,6 +18,10 @@ img {
   height: 167px;
 }
 
+.main-container {
+  padding: 70px;
+}
+
 @media (max-width: 500px) {
   .logo {
     width: 300px;
@@ -26,4 +30,14 @@ img {
 .main-title {
   display: flex;
   justify-content: space-around;
+}
+
+.pokemonCard {
+  padding: 20px;
+  height: 350px;
+  width: 250px;
+  background-color: #b8482c;
+  border-radius: 50px;
+  border: solid 2px black;
+  box-shadow: 5px 5px 5px;
 }

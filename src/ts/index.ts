@@ -1,13 +1,15 @@
-import HeaderComponent from "./components/Component/HeaderComponent.js";
+import HeaderComponent from "./components/HeaderComponent/HeaderComponent.js";
+import MainComponent from "./components/MainComponent/MainComponent.js";
 import getPokemons from "./dataPokemon/GetPokemon/GetPokemons.js";
 
-const apiUrl = "https://pokeapi.co/api/v2/pokemon";
-const limitPokemons = "?offset=20&limit=10";
-export const totalPokemons = `${apiUrl}${limitPokemons}`;
+const allPokeballs = await getPokemons(150);
 
-await getPokemons(totalPokemons);
+console.log(allPokeballs.map((allPokeball) => allPokeball.name));
 
 const { body } = document;
 
 const header = new HeaderComponent(body, "main-title", "header");
 header.render();
+
+const section = new MainComponent(body, "main-container", "section");
+section.render();
