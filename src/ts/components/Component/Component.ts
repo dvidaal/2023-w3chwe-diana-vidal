@@ -1,5 +1,4 @@
-import type ComponentStructure from "../types.js";
-
+import type ComponentStructure from "../../types";
 class Component implements ComponentStructure {
   element: Element;
 
