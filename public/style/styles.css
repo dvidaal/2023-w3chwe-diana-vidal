@@ -11,21 +11,17 @@ body {
   background-size: auto;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: bold;
+  overflow-x: hidden;
 }
 
-ul {
-  padding: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 20px;
-}
 li {
   list-style: none;
 }
 
-.pokemonCard {
-  text-transform: uppercase;
+@media (max-width: 500px) {
+  .logo {
+    width: 300px;
+  }
 }
 
 img {
@@ -34,15 +30,14 @@ img {
   height: 167px;
 }
 
+.pokemonCard {
+  text-transform: uppercase;
+}
+
 .main-container {
   padding: 70px;
 }
 
-@media (max-width: 500px) {
-  .logo {
-    width: 300px;
-  }
-}
 .main-title {
   display: flex;
   justify-content: space-around;
@@ -56,4 +51,12 @@ img {
   border-radius: 50px;
   border: solid 2px black;
   box-shadow: 5px 5px 5px;
+}
+
+.pokemonList {
+  display: flex;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
 }

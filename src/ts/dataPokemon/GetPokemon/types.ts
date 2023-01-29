@@ -1,9 +1,13 @@
 export interface PokemonStructure {
   name: string;
   url: string;
+  height: string;
+  weight: string;
   sprites: {
-    dream_world: {
-      front_default: string;
+    other: {
+      dream_world: {
+        front_default: string;
+      };
     };
   };
 }
