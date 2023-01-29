@@ -27,11 +27,16 @@ li {
 img {
   padding: 10px;
   width: 350px;
-  height: 167px;
+  height: 200px;
+}
+
+.pokemonCard__imagePokemon {
+  width: 220px;
+  height: 200px;
 }
 
 .pokemonCard {
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
 .main-container {
@@ -47,7 +52,7 @@ img {
   padding: 20px;
   height: 350px;
   width: 250px;
-  background-color: #b8482c;
+  background-color: #e25734;
   border-radius: 50px;
   border: solid 2px black;
   box-shadow: 5px 5px 5px;
@@ -57,6 +62,6 @@ img {
   display: flex;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   gap: 20px;
 }
